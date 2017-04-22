@@ -1,0 +1,1180 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >ios-sim (v5.0.13)</a>
+</h1>
+<h4>launch iOS apps into the iOS Simulator from the command line (Xcode 7.0+)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ios-sim">module ios-sim</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.getdevicetypes">
+            function <span class="apidocSignatureSpan">ios-sim.</span>getdevicetypes
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.init">
+            function <span class="apidocSignatureSpan">ios-sim.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.install">
+            function <span class="apidocSignatureSpan">ios-sim.</span>install
+            <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.launch">
+            function <span class="apidocSignatureSpan">ios-sim.</span>launch
+            <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit, argv)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.showdevicetypes">
+            function <span class="apidocSignatureSpan">ios-sim.</span>showdevicetypes
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.showsdks">
+            function <span class="apidocSignatureSpan">ios-sim.</span>showsdks
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.start">
+            function <span class="apidocSignatureSpan">ios-sim.</span>start
+            <span class="apidocSignatureSpan">(devicetypeid)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ios-sim.</span>commands</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ios-sim.</span>js</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ios-sim.commands">module ios-sim.commands</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.commands.init">
+            function <span class="apidocSignatureSpan">ios-sim.commands.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.commands.install">
+            function <span class="apidocSignatureSpan">ios-sim.commands.</span>install
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.commands.launch">
+            function <span class="apidocSignatureSpan">ios-sim.commands.</span>launch
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.commands.showdevicetypes">
+            function <span class="apidocSignatureSpan">ios-sim.commands.</span>showdevicetypes
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.commands.showsdks">
+            function <span class="apidocSignatureSpan">ios-sim.commands.</span>showsdks
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.commands.start">
+            function <span class="apidocSignatureSpan">ios-sim.commands.</span>start
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ios-sim.js">module ios-sim.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.js.getdevicetypes">
+            function <span class="apidocSignatureSpan">ios-sim.js.</span>getdevicetypes
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.js.init">
+            function <span class="apidocSignatureSpan">ios-sim.js.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.js.install">
+            function <span class="apidocSignatureSpan">ios-sim.js.</span>install
+            <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.js.launch">
+            function <span class="apidocSignatureSpan">ios-sim.js.</span>launch
+            <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit, argv)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.js.showdevicetypes">
+            function <span class="apidocSignatureSpan">ios-sim.js.</span>showdevicetypes
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.js.showsdks">
+            function <span class="apidocSignatureSpan">ios-sim.js.</span>showsdks
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ios-sim.js.start">
+            function <span class="apidocSignatureSpan">ios-sim.js.</span>start
+            <span class="apidocSignatureSpan">(devicetypeid)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ios-sim" id="apidoc.module.ios-sim">module ios-sim</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.getdevicetypes" id="apidoc.element.ios-sim.getdevicetypes">
+        function <span class="apidocSignatureSpan">ios-sim.</span>getdevicetypes
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getdevicetypes = function (args) {
+    var options = { silent: true };
+    var list = simctl.list(options).json;
+
+    var druntimes = findRuntimesGroupByDeviceProperty(list, &#x27;name&#x27;, true);
+    var name_id_map = {};
+
+    list.devicetypes.forEach(function(device) {
+        name_id_map[ filterDeviceName(device.name) ] = device.id;
+    });
+
+    list = [];
+    var remove = function(devicename, runtime) {
+        // remove &#x22;iOS&#x22; prefix in runtime, remove prefix &#x22;com.apple.CoreSimulator.SimDeviceType.&#x22; in id
+        list.push(util.format(&#x27;%s, %s&#x27;, name_id_map[ devicename ].replace(/^com.apple.CoreSimulator.SimDeviceType./, &#x27;&#x27;), runtime
+.replace(/^iOS /, &#x27;&#x27;)));
+    };
+
+    var cur = function(devicename) {
+        return function(runtime) {
+            remove(devicename, runtime);
+        };
+    };
+
+    for (var deviceName in druntimes) {
+        var runtimes = druntimes[ deviceName ];
+        var dname = filterDeviceName(deviceName);
+
+        if (!(dname in name_id_map)) {
+            continue;
+        }
+
+        runtimes.forEach(cur(dname));
+    }
+    return list;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    return list;
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    this.<span class="apidocCodeKeywordSpan">getdevicetypes</span>().forEach(function(device) {
+        console.log(device);
+    });
+},
+//jscs:enable disallowUnusedParams
+
+launch: function(app_path, devicetypeid, log, exit, argv) {
+    var wait_for_debugger = false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.init" id="apidoc.element.ios-sim.init">
+        function <span class="apidocSignatureSpan">ios-sim.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+    if (!simctl) {
+        simctl = require(&#x27;simctl&#x27;);
+    }
+    var output = simctl.check_prerequisites();
+    if (output.code !== 0) {
+        console.error(output.output);
+        process.exit(2);
+    }
+
+    if (!bplist) {
+        bplist = require(&#x27;bplist-parser&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+var iossim = require(&#x27;./src/lib.js&#x27;);
+iossim.<span class="apidocCodeKeywordSpan">init</span>();
+
+exports = module.exports = iossim;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.install" id="apidoc.element.ios-sim.install">
+        function <span class="apidocSignatureSpan">ios-sim.</span>install
+        <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (app_path, devicetypeid, log, exit) {
+    var wait_for_debugger = false;
+    var info_plist_path;
+    var app_identifier;
+
+    info_plist_path = path.join(app_path,&#x27;Info.plist&#x27;);
+    if (!fs.existsSync(info_plist_path)) {
+        console.error(info_plist_path + &#x27; file not found.&#x27;);
+        process.exit(1);
+    }
+
+    bplist.parseFile(info_plist_path, function(err, obj) {
+
+        if (err) {
+            throw err;
+        }
+
+        app_identifier = obj[0].CFBundleIdentifier;
+
+        // get the deviceid from --devicetypeid
+        // --devicetypeid is a string in the form &#x22;devicetype, runtime_version&#x22; (optional: runtime_version)
+        var device = getDeviceFromDeviceTypeId(devicetypeid);
+
+        // so now we have the deviceid, we can proceed
+        simctl.extensions.start(device.id);
+        simctl.install(device.id, app_path);
+
+        simctl.extensions.log(device.id, log);
+        if (log) {
+            console.log(util.format(&#x27;logPath: %s&#x27;, path.resolve(log)));
+        }
+        if (exit) {
+            process.exit(0);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (args.argv.remain.length &#x3c; 2) {
+            help();
+            process.exit(1);
+        }
+
+        app_path = args.argv.remain[1];
+
+        lib.<span class="apidocCodeKeywordSpan">install</span>(app_path, args.devicetypeid, args.log, args.exit);
+    },
+
+    start: function(args) {
+        lib.start(args.devicetypeid);
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.launch" id="apidoc.element.ios-sim.launch">
+        function <span class="apidocSignatureSpan">ios-sim.</span>launch
+        <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit, argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">launch = function (app_path, devicetypeid, log, exit, argv) {
+    var wait_for_debugger = false;
+    var info_plist_path;
+    var app_identifier;
+
+    info_plist_path = path.join(app_path,&#x27;Info.plist&#x27;);
+    if (!fs.existsSync(info_plist_path)) {
+        console.error(info_plist_path + &#x27; file not found.&#x27;);
+        process.exit(1);
+    }
+
+    bplist.parseFile(info_plist_path, function(err, obj) {
+
+        if (err) {
+            // try to see if a regular plist parser will work
+            if (!plist) {
+                plist = require(&#x27;plist&#x27;);
+            }
+            obj = plist.parse(fs.readFileSync(info_plist_path, &#x27;utf8&#x27;));
+            if (obj) {
+                app_identifier = obj.CFBundleIdentifier;
+            } else {
+                throw err;
+            }
+        } else {
+            app_identifier = obj[0].CFBundleIdentifier;
+        }
+
+        argv = argv || [];
+
+        // get the deviceid from --devicetypeid
+        // --devicetypeid is a string in the form &#x22;devicetype, runtime_version&#x22; (optional: runtime_version)
+        var device = getDeviceFromDeviceTypeId(devicetypeid);
+
+        // so now we have the deviceid, we can proceed
+        simctl.extensions.start(device.id);
+        simctl.install(device.id, app_path);
+        simctl.launch(wait_for_debugger, device.id, app_identifier, argv);
+        simctl.extensions.log(device.id, log);
+        if (log) {
+            console.log(util.format(&#x27;logPath: %s&#x27;, path.resolve(log)));
+        }
+        if (exit) {
+            process.exit(0);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (args.argv.remain.length &#x3c; 2) {
+        help();
+        process.exit(1);
+    }
+
+    app_path = args.argv.remain[1];
+
+    lib.<span class="apidocCodeKeywordSpan">launch</span>(app_path, args.devicetypeid, args.log, args.exit, args.args);
+},
+
+install: function(args) {
+    var app_identifier;
+    var argv;
+    var app_path;
+    var info_plist_path;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.showdevicetypes" id="apidoc.element.ios-sim.showdevicetypes">
+        function <span class="apidocSignatureSpan">ios-sim.</span>showdevicetypes
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showdevicetypes = function (args) {
+    this.getdevicetypes().forEach(function(device) {
+        console.log(device);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+showsdks: function(args) {
+    lib.showsdks();
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    lib.<span class="apidocCodeKeywordSpan">showdevicetypes</span>();
+},
+//jscs:enable disallowUnusedParams
+
+launch: function(args) {
+    var wait_for_debugger = false;
+    var app_path;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.showsdks" id="apidoc.element.ios-sim.showsdks">
+        function <span class="apidocSignatureSpan">ios-sim.</span>showsdks
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showsdks = function (args) {
+    var options = { silent: true, runtimes: true };
+    var list = simctl.list(options).json;
+
+    console.log(&#x27;Simulator SDK Roots:&#x27;);
+    list.runtimes.forEach(function(runtime) {
+        if (runtime.available) {
+            console.log(util.format(&#x27;&#x22;%s&#x22; (%s)&#x27;, runtime.name, runtime.build));
+            console.log(util.format(&#x27;\t(unknown)&#x27;));
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+init: function() {
+    lib.init();
+},
+
+//jscs:disable disallowUnusedParams
+showsdks: function(args) {
+    lib.<span class="apidocCodeKeywordSpan">showsdks</span>();
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    lib.showdevicetypes();
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.start" id="apidoc.element.ios-sim.start">
+        function <span class="apidocSignatureSpan">ios-sim.</span>start
+        <span class="apidocSignatureSpan">(devicetypeid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (devicetypeid) {
+    var device = {};
+    try {
+        device = getDeviceFromDeviceTypeId(devicetypeid);
+    } catch (e) {
+        console.error(e);
+    }
+
+    simctl.extensions.start(device.id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        app_path = args.argv.remain[1];
+
+        lib.install(app_path, args.devicetypeid, args.log, args.exit);
+    },
+
+    start: function(args) {
+        lib.<span class="apidocCodeKeywordSpan">start</span>(args.devicetypeid);
+    }
+};
+
+module.exports = command_lib;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ios-sim.commands" id="apidoc.module.ios-sim.commands">module ios-sim.commands</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.commands.init" id="apidoc.element.ios-sim.commands.init">
+        function <span class="apidocSignatureSpan">ios-sim.commands.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+    lib.init();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+var iossim = require(&#x27;./src/lib.js&#x27;);
+iossim.<span class="apidocCodeKeywordSpan">init</span>();
+
+exports = module.exports = iossim;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.commands.install" id="apidoc.element.ios-sim.commands.install">
+        function <span class="apidocSignatureSpan">ios-sim.commands.</span>install
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (args) {
+    var app_identifier;
+    var argv;
+    var app_path;
+    var info_plist_path;
+
+    if (args.argv.remain.length &#x3c; 2) {
+        help();
+        process.exit(1);
+    }
+
+    app_path = args.argv.remain[1];
+
+    lib.install(app_path, args.devicetypeid, args.log, args.exit);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (args.argv.remain.length &#x3c; 2) {
+            help();
+            process.exit(1);
+        }
+
+        app_path = args.argv.remain[1];
+
+        lib.<span class="apidocCodeKeywordSpan">install</span>(app_path, args.devicetypeid, args.log, args.exit);
+    },
+
+    start: function(args) {
+        lib.start(args.devicetypeid);
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.commands.launch" id="apidoc.element.ios-sim.commands.launch">
+        function <span class="apidocSignatureSpan">ios-sim.commands.</span>launch
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">launch = function (args) {
+    var wait_for_debugger = false;
+    var app_path;
+
+    if (args.argv.remain.length &#x3c; 2) {
+        help();
+        process.exit(1);
+    }
+
+    app_path = args.argv.remain[1];
+
+    lib.launch(app_path, args.devicetypeid, args.log, args.exit, args.args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (args.argv.remain.length &#x3c; 2) {
+        help();
+        process.exit(1);
+    }
+
+    app_path = args.argv.remain[1];
+
+    lib.<span class="apidocCodeKeywordSpan">launch</span>(app_path, args.devicetypeid, args.log, args.exit, args.args);
+},
+
+install: function(args) {
+    var app_identifier;
+    var argv;
+    var app_path;
+    var info_plist_path;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.commands.showdevicetypes" id="apidoc.element.ios-sim.commands.showdevicetypes">
+        function <span class="apidocSignatureSpan">ios-sim.commands.</span>showdevicetypes
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showdevicetypes = function (args) {
+    lib.showdevicetypes();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+showsdks: function(args) {
+    lib.showsdks();
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    lib.<span class="apidocCodeKeywordSpan">showdevicetypes</span>();
+},
+//jscs:enable disallowUnusedParams
+
+launch: function(args) {
+    var wait_for_debugger = false;
+    var app_path;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.commands.showsdks" id="apidoc.element.ios-sim.commands.showsdks">
+        function <span class="apidocSignatureSpan">ios-sim.commands.</span>showsdks
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showsdks = function (args) {
+    lib.showsdks();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+init: function() {
+    lib.init();
+},
+
+//jscs:disable disallowUnusedParams
+showsdks: function(args) {
+    lib.<span class="apidocCodeKeywordSpan">showsdks</span>();
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    lib.showdevicetypes();
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.commands.start" id="apidoc.element.ios-sim.commands.start">
+        function <span class="apidocSignatureSpan">ios-sim.commands.</span>start
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (args) {
+    lib.start(args.devicetypeid);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        app_path = args.argv.remain[1];
+
+        lib.install(app_path, args.devicetypeid, args.log, args.exit);
+    },
+
+    start: function(args) {
+        lib.<span class="apidocCodeKeywordSpan">start</span>(args.devicetypeid);
+    }
+};
+
+module.exports = command_lib;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ios-sim.js" id="apidoc.module.ios-sim.js">module ios-sim.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.js.getdevicetypes" id="apidoc.element.ios-sim.js.getdevicetypes">
+        function <span class="apidocSignatureSpan">ios-sim.js.</span>getdevicetypes
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getdevicetypes = function (args) {
+    var options = { silent: true };
+    var list = simctl.list(options).json;
+
+    var druntimes = findRuntimesGroupByDeviceProperty(list, &#x27;name&#x27;, true);
+    var name_id_map = {};
+
+    list.devicetypes.forEach(function(device) {
+        name_id_map[ filterDeviceName(device.name) ] = device.id;
+    });
+
+    list = [];
+    var remove = function(devicename, runtime) {
+        // remove &#x22;iOS&#x22; prefix in runtime, remove prefix &#x22;com.apple.CoreSimulator.SimDeviceType.&#x22; in id
+        list.push(util.format(&#x27;%s, %s&#x27;, name_id_map[ devicename ].replace(/^com.apple.CoreSimulator.SimDeviceType./, &#x27;&#x27;), runtime
+.replace(/^iOS /, &#x27;&#x27;)));
+    };
+
+    var cur = function(devicename) {
+        return function(runtime) {
+            remove(devicename, runtime);
+        };
+    };
+
+    for (var deviceName in druntimes) {
+        var runtimes = druntimes[ deviceName ];
+        var dname = filterDeviceName(deviceName);
+
+        if (!(dname in name_id_map)) {
+            continue;
+        }
+
+        runtimes.forEach(cur(dname));
+    }
+    return list;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    return list;
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    this.<span class="apidocCodeKeywordSpan">getdevicetypes</span>().forEach(function(device) {
+        console.log(device);
+    });
+},
+//jscs:enable disallowUnusedParams
+
+launch: function(app_path, devicetypeid, log, exit, argv) {
+    var wait_for_debugger = false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.js.init" id="apidoc.element.ios-sim.js.init">
+        function <span class="apidocSignatureSpan">ios-sim.js.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+    if (!simctl) {
+        simctl = require(&#x27;simctl&#x27;);
+    }
+    var output = simctl.check_prerequisites();
+    if (output.code !== 0) {
+        console.error(output.output);
+        process.exit(2);
+    }
+
+    if (!bplist) {
+        bplist = require(&#x27;bplist-parser&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+var iossim = require(&#x27;./src/lib.js&#x27;);
+iossim.<span class="apidocCodeKeywordSpan">init</span>();
+
+exports = module.exports = iossim;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.js.install" id="apidoc.element.ios-sim.js.install">
+        function <span class="apidocSignatureSpan">ios-sim.js.</span>install
+        <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">install = function (app_path, devicetypeid, log, exit) {
+    var wait_for_debugger = false;
+    var info_plist_path;
+    var app_identifier;
+
+    info_plist_path = path.join(app_path,&#x27;Info.plist&#x27;);
+    if (!fs.existsSync(info_plist_path)) {
+        console.error(info_plist_path + &#x27; file not found.&#x27;);
+        process.exit(1);
+    }
+
+    bplist.parseFile(info_plist_path, function(err, obj) {
+
+        if (err) {
+            throw err;
+        }
+
+        app_identifier = obj[0].CFBundleIdentifier;
+
+        // get the deviceid from --devicetypeid
+        // --devicetypeid is a string in the form &#x22;devicetype, runtime_version&#x22; (optional: runtime_version)
+        var device = getDeviceFromDeviceTypeId(devicetypeid);
+
+        // so now we have the deviceid, we can proceed
+        simctl.extensions.start(device.id);
+        simctl.install(device.id, app_path);
+
+        simctl.extensions.log(device.id, log);
+        if (log) {
+            console.log(util.format(&#x27;logPath: %s&#x27;, path.resolve(log)));
+        }
+        if (exit) {
+            process.exit(0);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (args.argv.remain.length &#x3c; 2) {
+            help();
+            process.exit(1);
+        }
+
+        app_path = args.argv.remain[1];
+
+        lib.<span class="apidocCodeKeywordSpan">install</span>(app_path, args.devicetypeid, args.log, args.exit);
+    },
+
+    start: function(args) {
+        lib.start(args.devicetypeid);
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.js.launch" id="apidoc.element.ios-sim.js.launch">
+        function <span class="apidocSignatureSpan">ios-sim.js.</span>launch
+        <span class="apidocSignatureSpan">(app_path, devicetypeid, log, exit, argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">launch = function (app_path, devicetypeid, log, exit, argv) {
+    var wait_for_debugger = false;
+    var info_plist_path;
+    var app_identifier;
+
+    info_plist_path = path.join(app_path,&#x27;Info.plist&#x27;);
+    if (!fs.existsSync(info_plist_path)) {
+        console.error(info_plist_path + &#x27; file not found.&#x27;);
+        process.exit(1);
+    }
+
+    bplist.parseFile(info_plist_path, function(err, obj) {
+
+        if (err) {
+            // try to see if a regular plist parser will work
+            if (!plist) {
+                plist = require(&#x27;plist&#x27;);
+            }
+            obj = plist.parse(fs.readFileSync(info_plist_path, &#x27;utf8&#x27;));
+            if (obj) {
+                app_identifier = obj.CFBundleIdentifier;
+            } else {
+                throw err;
+            }
+        } else {
+            app_identifier = obj[0].CFBundleIdentifier;
+        }
+
+        argv = argv || [];
+
+        // get the deviceid from --devicetypeid
+        // --devicetypeid is a string in the form &#x22;devicetype, runtime_version&#x22; (optional: runtime_version)
+        var device = getDeviceFromDeviceTypeId(devicetypeid);
+
+        // so now we have the deviceid, we can proceed
+        simctl.extensions.start(device.id);
+        simctl.install(device.id, app_path);
+        simctl.launch(wait_for_debugger, device.id, app_identifier, argv);
+        simctl.extensions.log(device.id, log);
+        if (log) {
+            console.log(util.format(&#x27;logPath: %s&#x27;, path.resolve(log)));
+        }
+        if (exit) {
+            process.exit(0);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (args.argv.remain.length &#x3c; 2) {
+        help();
+        process.exit(1);
+    }
+
+    app_path = args.argv.remain[1];
+
+    lib.<span class="apidocCodeKeywordSpan">launch</span>(app_path, args.devicetypeid, args.log, args.exit, args.args);
+},
+
+install: function(args) {
+    var app_identifier;
+    var argv;
+    var app_path;
+    var info_plist_path;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.js.showdevicetypes" id="apidoc.element.ios-sim.js.showdevicetypes">
+        function <span class="apidocSignatureSpan">ios-sim.js.</span>showdevicetypes
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showdevicetypes = function (args) {
+    this.getdevicetypes().forEach(function(device) {
+        console.log(device);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+showsdks: function(args) {
+    lib.showsdks();
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    lib.<span class="apidocCodeKeywordSpan">showdevicetypes</span>();
+},
+//jscs:enable disallowUnusedParams
+
+launch: function(args) {
+    var wait_for_debugger = false;
+    var app_path;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.js.showsdks" id="apidoc.element.ios-sim.js.showsdks">
+        function <span class="apidocSignatureSpan">ios-sim.js.</span>showsdks
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showsdks = function (args) {
+    var options = { silent: true, runtimes: true };
+    var list = simctl.list(options).json;
+
+    console.log(&#x27;Simulator SDK Roots:&#x27;);
+    list.runtimes.forEach(function(runtime) {
+        if (runtime.available) {
+            console.log(util.format(&#x27;&#x22;%s&#x22; (%s)&#x27;, runtime.name, runtime.build));
+            console.log(util.format(&#x27;\t(unknown)&#x27;));
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+init: function() {
+    lib.init();
+},
+
+//jscs:disable disallowUnusedParams
+showsdks: function(args) {
+    lib.<span class="apidocCodeKeywordSpan">showsdks</span>();
+},
+//jscs:enable disallowUnusedParams
+
+//jscs:disable disallowUnusedParams
+showdevicetypes: function(args) {
+    lib.showdevicetypes();
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ios-sim.js.start" id="apidoc.element.ios-sim.js.start">
+        function <span class="apidocSignatureSpan">ios-sim.js.</span>start
+        <span class="apidocSignatureSpan">(devicetypeid)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (devicetypeid) {
+    var device = {};
+    try {
+        device = getDeviceFromDeviceTypeId(devicetypeid);
+    } catch (e) {
+        console.error(e);
+    }
+
+    simctl.extensions.start(device.id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        app_path = args.argv.remain[1];
+
+        lib.install(app_path, args.devicetypeid, args.log, args.exit);
+    },
+
+    start: function(args) {
+        lib.<span class="apidocCodeKeywordSpan">start</span>(args.devicetypeid);
+    }
+};
+
+module.exports = command_lib;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>

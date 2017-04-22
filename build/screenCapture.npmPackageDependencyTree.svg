@@ -1,0 +1,21 @@
+<svg height="286" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="286" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">4 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ ios-sim@5.0.13 </tspan>
+<tspan x="10" y="90">  ├── bplist-parser@0.0.6 </tspan>
+<tspan x="10" y="106">  ├─┬ nopt@1.0.9 </tspan>
+<tspan x="10" y="122">  │ └── abbrev@1.1.0 </tspan>
+<tspan x="10" y="138">  ├─┬ plist@1.2.0 </tspan>
+<tspan x="10" y="154">  │ ├── base64-js@0.0.8 </tspan>
+<tspan x="10" y="170">  │ ├── util-deprecate@1.0.2 </tspan>
+<tspan x="10" y="186">  │ ├─┬ xmlbuilder@4.0.0 </tspan>
+<tspan x="10" y="202">  │ │ └── lodash@3.10.1 </tspan>
+<tspan x="10" y="218">  │ └── xmldom@0.1.27 </tspan>
+<tspan x="10" y="234">  └─┬ simctl@0.1.0 </tspan>
+<tspan x="10" y="250">    ├── shelljs@0.2.6 </tspan>
+<tspan x="10" y="266">    └── tail@0.4.0</tspan>
+</text>
+</svg>
